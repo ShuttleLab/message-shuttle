@@ -13,7 +13,7 @@ export function SupportDonateButton() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-flex items-center px-6 py-3 bg-white text-indigo-600 rounded-lg font-medium hover:bg-indigo-50 transition-colors shadow-sm"
+        className="inline-flex items-center px-6 py-3 bg-white dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 rounded-lg font-medium hover:bg-indigo-50 dark:hover:bg-gray-700 transition-colors shadow-sm"
       >
         <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -23,17 +23,17 @@ export function SupportDonateButton() {
 
       {open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4" role="dialog" aria-modal="true">
-          <div className="bg-white rounded-xl shadow-2xl w-full max-w-2xl p-6">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl w-full max-w-2xl p-6">
             <div className="flex items-start justify-between mb-4">
               <div>
-                <h3 className="text-xl font-semibold text-gray-900">{t.donate.title}</h3>
-                <p className="text-sm text-gray-500 mt-1">{t.donate.desc}</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">{t.donate.title}</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{t.donate.desc}</p>
               </div>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
                 aria-label="关闭"
-                className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg"
+                className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -42,8 +42,8 @@ export function SupportDonateButton() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="border border-gray-200 rounded-lg p-3">
-                <p className="font-medium text-gray-800 mb-2 text-sm">{t.donate.wechat}</p>
+              <div className="border border-gray-200 dark:border-gray-600 rounded-lg p-3">
+                <p className="font-medium text-gray-800 dark:text-gray-200 mb-2 text-sm">{t.donate.wechat}</p>
                 <div className="relative mx-auto h-40 w-40">
                   <Image
                     src="/wechat-qr.png"
@@ -55,8 +55,8 @@ export function SupportDonateButton() {
                   />
                 </div>
               </div>
-              <div className="border border-gray-200 rounded-lg p-3">
-                <p className="font-medium text-gray-800 mb-2 text-sm">{t.donate.alipay}</p>
+              <div className="border border-gray-200 dark:border-gray-600 rounded-lg p-3">
+                <p className="font-medium text-gray-800 dark:text-gray-200 mb-2 text-sm">{t.donate.alipay}</p>
                 <div className="relative mx-auto h-40 w-40">
                   <Image
                     src="/alipay-qr.png"
@@ -68,8 +68,8 @@ export function SupportDonateButton() {
                   />
                 </div>
               </div>
-              <div className="border border-gray-200 rounded-lg p-3">
-                <p className="font-medium text-gray-800 mb-2 text-sm">{t.donate.paypal}</p>
+              <div className="border border-gray-200 dark:border-gray-600 rounded-lg p-3">
+                <p className="font-medium text-gray-800 dark:text-gray-200 mb-2 text-sm">{t.donate.paypal}</p>
                 <div className="relative mx-auto h-40 w-40">
                   <Image
                     src="/paypal-qr.png"
@@ -87,7 +87,7 @@ export function SupportDonateButton() {
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200"
+                className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600"
               >
                 {t.donate.close}
               </button>
