@@ -1,0 +1,38 @@
+{
+  "name": "my-nextjs-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "wrangler:dev": "wrangler dev",
+    "wrangler:deploy": "wrangler deploy",
+    "wrangler:login": "wrangler login",
+    "wrangler:kv:local": "wrangler kv:namespace create KV_LOCAL --local",
+    "wrangler:kv:sync": "wrangler kv:key list --binding KV --local | head -20",
+    "local": "concurrently \"npm run dev\" \"npm run wrangler:dev\""
+  },
+  "dependencies": {
+    "@cloudflare/next-on-pages": "^1.11.1",
+    "next": "15.5.2",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "vibe-kanban-web-companion": "^0.0.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250121.0",
+    "@eslint/eslintrc": "^3.3.3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "concurrently": "^9.0.1",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.2",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "wrangler": "^3.109.0"
+  }
+}

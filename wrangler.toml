@@ -1,0 +1,9 @@
+name = "message-shuttle"
+compatibility_date = "2026-01-01"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "./.vercel/output/static"
+
+[[kv_namespaces]]
+# 生产 KV 绑定名与控制台保持一致
+binding = "message-kv"
+id = "17e4a77a99b54b17920ecdda1da22bd3"
