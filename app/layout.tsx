@@ -5,6 +5,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import VibeKanbanWrapper from "@/components/vibe-kanban-wrapper";
 import { I18nProvider } from "@/components/i18n-provider";
+import { ThemeSync } from "@/components/theme-sync";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,10 +28,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh">
+    <html lang="zh" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
+        <ThemeSync />
         <I18nProvider>
           <VibeKanbanWrapper />
           <Header />

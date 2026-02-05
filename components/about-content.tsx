@@ -3,6 +3,7 @@
 import { useI18n } from "@/components/i18n-provider";
 import { SupportDonateButton } from "@/components/support-donate";
 import { ShareButton } from "@/components/share-button";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function AboutContent() {
   const { t } = useI18n();
@@ -10,125 +11,170 @@ export default function AboutContent() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">{t.about.heroTitle}</h1>
-        <p className="text-xl text-gray-600 dark:text-gray-400">
-          {t.about.heroSubtitle}
-        </p>
+        <h1 className="text-4xl font-bold text-foreground mb-4">
+          {t.about.heroTitle}
+        </h1>
+        <p className="text-xl text-muted-foreground">{t.about.heroSubtitle}</p>
       </div>
 
-      {/* 服务介绍 */}
-      <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-8 mb-8">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6">{t.about.serviceTitle}</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-4">
-          {t.about.serviceP1}
-        </p>
-        <p className="text-gray-600 dark:text-gray-400">
-          {t.about.serviceP2}
-        </p>
-      </div>
+      <Card className="mb-8">
+        <CardContent className="pt-6">
+          <h2 className="text-2xl font-semibold text-foreground mb-6">
+            {t.about.serviceTitle}
+          </h2>
+          <p className="text-muted-foreground mb-4">{t.about.serviceP1}</p>
+          <p className="text-muted-foreground">{t.about.serviceP2}</p>
+        </CardContent>
+      </Card>
 
-      {/* 安全特性 */}
       <div className="grid md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-lg p-6">
-          <div className="flex items-center mb-4">
-            <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
+        <Card className="border-primary/20 bg-primary/5">
+          <CardContent className="pt-6">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/10 text-primary">
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-foreground ml-4">
+                {t.about.fast}
+              </h3>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 ml-4">{t.about.fast}</h3>
-          </div>
-          <p className="text-gray-600 dark:text-gray-400">
-            {t.about.fastDesc}
-          </p>
-        </div>
+            <p className="text-muted-foreground">{t.about.fastDesc}</p>
+          </CardContent>
+        </Card>
 
-        <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 rounded-lg p-6">
-          <div className="flex items-center mb-4">
-            <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/50 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
+        <Card className="border-primary/20 bg-primary/5">
+          <CardContent className="pt-6">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/10 text-primary">
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-foreground ml-4">
+                {t.about.safe}
+              </h3>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 ml-4">{t.about.safe}</h3>
-          </div>
-          <p className="text-gray-600 dark:text-gray-400">
-            {t.about.safeDesc}
-          </p>
-        </div>
+            <p className="text-muted-foreground">{t.about.safeDesc}</p>
+          </CardContent>
+        </Card>
 
-        <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-lg p-6">
-          <div className="flex items-center mb-4">
-            <div className="w-12 h-12 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
-              </svg>
+        <Card className="border-primary/20 bg-primary/5">
+          <CardContent className="pt-6">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/10 text-primary">
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-foreground ml-4">
+                {t.about.privacy}
+              </h3>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 ml-4">{t.about.privacy}</h3>
-          </div>
-          <p className="text-gray-600 dark:text-gray-400">
-            {t.about.privacyDesc}
-          </p>
-        </div>
+            <p className="text-muted-foreground">{t.about.privacyDesc}</p>
+          </CardContent>
+        </Card>
 
-        <div className="bg-gradient-to-br from-orange-50 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20 rounded-lg p-6">
-          <div className="flex items-center mb-4">
-            <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/50 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+        <Card className="border-primary/20 bg-primary/5">
+          <CardContent className="pt-6">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/10 text-primary">
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-foreground ml-4">
+                {t.about.ttl}
+              </h3>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 ml-4">{t.about.ttl}</h3>
-          </div>
-          <p className="text-gray-600 dark:text-gray-400">
-            {t.about.ttlDesc}
-          </p>
-        </div>
+            <p className="text-muted-foreground">{t.about.ttlDesc}</p>
+          </CardContent>
+        </Card>
       </div>
 
-      {/* 使用场景 */}
-      <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-8 mb-8">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6">{t.about.useCases}</h2>
-        <ul className="space-y-3 text-gray-600 dark:text-gray-400">
-          <li className="flex items-start">
-            <span className="text-indigo-500 dark:text-indigo-400 mr-3">✓</span>
-            {t.about.use1}
-          </li>
-          <li className="flex items-start">
-            <span className="text-indigo-500 dark:text-indigo-400 mr-3">✓</span>
-            {t.about.use2}
-          </li>
-          <li className="flex items-start">
-            <span className="text-indigo-500 dark:text-indigo-400 mr-3">✓</span>
-            {t.about.use3}
-          </li>
-          <li className="flex items-start">
-            <span className="text-indigo-500 dark:text-indigo-400 mr-3">✓</span>
-            {t.about.use4}
-          </li>
-        </ul>
-      </div>
+      <Card className="mb-8">
+        <CardContent className="pt-6">
+          <h2 className="text-2xl font-semibold text-foreground mb-6">
+            {t.about.useCases}
+          </h2>
+          <ul className="space-y-3 text-muted-foreground">
+            <li className="flex items-start">
+              <span className="text-primary mr-3">✓</span>
+              {t.about.use1}
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-3">✓</span>
+              {t.about.use2}
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-3">✓</span>
+              {t.about.use3}
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-3">✓</span>
+              {t.about.use4}
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
 
-      {/* 支持我们 */}
-      <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg p-8 text-white">
+      <div className="bg-primary text-primary-foreground rounded-lg p-8 mb-8">
         <h2 className="text-2xl font-semibold mb-4">{t.about.supportTitle}</h2>
-        <p className="mb-6 text-indigo-100">
-          {t.about.supportDesc}
-        </p>
+        <p className="mb-6 opacity-90">{t.about.supportDesc}</p>
         <div className="flex flex-wrap gap-4">
           <SupportDonateButton />
           <ShareButton />
         </div>
       </div>
 
-      {/* 联系方式 */}
-      <div className="mt-8 text-center text-gray-500 dark:text-gray-400">
+      <div className="mt-8 text-center text-muted-foreground">
         <p>{t.about.contactDesc}</p>
         <p className="mt-2">
           {t.about.contactEmail}：
           <a
             href="mailto:a.tiling120@slmail.me"
-            className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 underline underline-offset-4"
+            className="text-primary hover:underline underline-offset-4"
           >
             a.tiling120@slmail.me
           </a>
