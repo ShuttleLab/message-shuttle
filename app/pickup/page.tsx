@@ -114,7 +114,7 @@ export default function PickupPage() {
             ) : (
               <div>
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-primary/10 text-primary">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-success/20 text-success">
                     <svg
                       className="w-8 h-8"
                       fill="none"
@@ -134,10 +134,10 @@ export default function PickupPage() {
                   </h2>
                 </div>
 
-                <div className="rounded-md border bg-muted/50 p-4 mb-4">
+                <div className="rounded-md border border-success/30 bg-success/5 p-4 mb-4">
                   <div className="flex items-start gap-3">
                     <svg
-                      className="w-5 h-5 text-primary mt-0.5 flex-shrink-0"
+                      className="w-5 h-5 text-success mt-0.5 flex-shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

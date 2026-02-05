@@ -28,10 +28,10 @@ export default function AboutContent() {
       </Card>
 
       <div className="grid md:grid-cols-2 gap-6 mb-8">
-        <Card className="border-primary/20 bg-primary/5">
+        <Card className="border-chart-1/30 bg-chart-1/5">
           <CardContent className="pt-6">
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/10 text-primary">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-chart-1/15 text-chart-1">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -54,10 +54,10 @@ export default function AboutContent() {
           </CardContent>
         </Card>
 
-        <Card className="border-primary/20 bg-primary/5">
+        <Card className="border-chart-2/30 bg-chart-2/5">
           <CardContent className="pt-6">
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/10 text-primary">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-chart-2/15 text-chart-2">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -80,10 +80,10 @@ export default function AboutContent() {
           </CardContent>
         </Card>
 
-        <Card className="border-primary/20 bg-primary/5">
+        <Card className="border-chart-3/30 bg-chart-3/5">
           <CardContent className="pt-6">
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/10 text-primary">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-chart-3/15 text-chart-3">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -106,10 +106,10 @@ export default function AboutContent() {
           </CardContent>
         </Card>
 
-        <Card className="border-primary/20 bg-primary/5">
+        <Card className="border-chart-4/30 bg-chart-4/5">
           <CardContent className="pt-6">
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/10 text-primary">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-chart-4/15 text-chart-4">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -140,26 +140,26 @@ export default function AboutContent() {
           </h2>
           <ul className="space-y-3 text-muted-foreground">
             <li className="flex items-start">
-              <span className="text-primary mr-3">✓</span>
+              <span className="text-chart-1 mr-3">✓</span>
               {t.about.use1}
             </li>
             <li className="flex items-start">
-              <span className="text-primary mr-3">✓</span>
+              <span className="text-chart-2 mr-3">✓</span>
               {t.about.use2}
             </li>
             <li className="flex items-start">
-              <span className="text-primary mr-3">✓</span>
+              <span className="text-chart-3 mr-3">✓</span>
               {t.about.use3}
             </li>
             <li className="flex items-start">
-              <span className="text-primary mr-3">✓</span>
+              <span className="text-chart-4 mr-3">✓</span>
               {t.about.use4}
             </li>
           </ul>
         </CardContent>
       </Card>
 
-      <div className="bg-primary text-primary-foreground rounded-lg p-8 mb-8">
+      <div className="bg-gradient-to-r from-primary via-primary to-chart-5 text-primary-foreground rounded-xl p-8 mb-8 shadow-lg">
         <h2 className="text-2xl font-semibold mb-4">{t.about.supportTitle}</h2>
         <p className="mb-6 opacity-90">{t.about.supportDesc}</p>
         <div className="flex flex-wrap gap-4">

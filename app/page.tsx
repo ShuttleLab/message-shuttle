@@ -16,9 +16,9 @@ export default function Home() {
 
       <div className="grid md:grid-cols-2 gap-6">
         <Link href="/send" className="block group">
-          <Card className="h-full transition-shadow hover:shadow-lg border-2 border-transparent hover:border-primary">
+          <Card className="h-full transition-all hover:shadow-xl border-2 border-transparent hover:border-primary/50 bg-gradient-to-br from-card to-primary/5">
             <CardContent className="pt-6">
-              <div className="flex items-center justify-center w-16 h-16 rounded-full mb-6 bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+              <div className="flex items-center justify-center w-16 h-16 rounded-full mb-6 bg-primary/15 text-primary group-hover:bg-primary/25 group-hover:scale-105 transition-all">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                 </svg>
@@ -36,16 +36,16 @@ export default function Home() {
         </Link>
 
         <Link href="/pickup" className="block group">
-          <Card className="h-full transition-shadow hover:shadow-lg border-2 border-transparent hover:border-primary">
+          <Card className="h-full transition-all hover:shadow-xl border-2 border-transparent hover:border-chart-2/50 bg-gradient-to-br from-card to-chart-2/5">
             <CardContent className="pt-6">
-              <div className="flex items-center justify-center w-16 h-16 rounded-full mb-6 bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+              <div className="flex items-center justify-center w-16 h-16 rounded-full mb-6 bg-chart-2/15 text-chart-2 group-hover:bg-chart-2/25 group-hover:scale-105 transition-all">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
                 </svg>
               </div>
               <h2 className="text-2xl font-bold text-foreground mb-3">{t.home.recvTitle}</h2>
               <p className="text-muted-foreground mb-4">{t.home.recvDesc}</p>
-              <div className="flex items-center text-primary font-medium">
+              <div className="flex items-center text-chart-2 font-medium">
                 {t.home.recvCta}
                 <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

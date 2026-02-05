@@ -110,10 +110,10 @@ export default function SendPage() {
           )}
 
           {pickupCode && (
-            <div className="mb-6 p-4 rounded-lg border bg-muted/50">
+            <div className="mb-6 p-4 rounded-lg border border-success/30 bg-success/5">
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div>
-                  <p className="text-sm font-medium text-muted-foreground mb-1">
+                  <p className="text-sm font-medium text-success mb-1">
                     {t.send.pickupCode}
                   </p>
                   <p className="text-3xl font-bold text-foreground tracking-wider">
