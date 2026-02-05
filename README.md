@@ -1,6 +1,24 @@
 # Message Shuttle
 
-Temporary message transfer app built with **Next.js 15** and **Cloudflare Pages/Workers**. Send and pick up messages with one-time retrieval and optional self-destruct. Includes i18n (zh/en) and share links.
+Temporary message transfer app: send and pick up messages with one-time retrieval. i18n (zh/en), share links. Use as a **template** for other Next.js + Cloudflare projects.
+
+---
+
+## Template & tech (at a glance)
+
+| Aspect | Choice |
+|--------|--------|
+| **Framework** | Next.js 15 (App Router), React 19 |
+| **Rendering** | **SSG** (pages built at deploy) + **Edge API** (dynamic, per request) |
+| **Hosting** | Cloudflare Pages; API runs on Workers (Functions) |
+| **Storage** | Cloudflare Workers KV (`message-kv` binding) |
+| **UI** | **shadcn/ui** (New York, Tailwind v4), semantic tokens, OKLCH colors |
+| **Styling** | Tailwind CSS v4, `@theme inline`, light/dark via system (`prefers-color-scheme`) |
+| **Icons** | Lucide React (via shadcn) |
+
+**Good for:** Apps that need static front-end + serverless API and KV; base for new projects with consistent UI and Cloudflare deployment.
+
+---
 
 ## Features
 
@@ -9,7 +27,6 @@ Temporary message transfer app built with **Next.js 15** and **Cloudflare Pages/
 - **One-time pickup** — Message deleted after retrieval; copy content easily
 - **Share** — Copy receive URL + pickup code for sharing
 - **Cloudflare KV** — Edge storage, binding name: `message-kv`
-- **Stack** — Next.js 15 App Router, TypeScript, Tailwind CSS
 
 ## Quick Start
 
@@ -55,10 +72,14 @@ Optional: run Next.js + Wrangler together with `npm run local` (Next.js on 3000,
 3. **KV**: In **Settings → Functions → KV namespace bindings**, add variable `message-kv` and attach a KV namespace.
 4. Push to `main` to deploy.
 
-## Tech Stack
+## Tech stack (detail)
 
-Next.js 15 · Cloudflare Workers · Cloudflare KV · TypeScript · Tailwind CSS · [@cloudflare/next-on-pages](https://github.com/cloudflare/next-on-pages)
+- **Next.js 15** (App Router), **React 19**, **TypeScript**
+- **Tailwind CSS v4** (`@theme inline`, CSS-first config)
+- **shadcn/ui** (canary, Tailwind v4) — Button, Card, Input, Label, Textarea, Dialog, etc.
+- **Cloudflare**: [@cloudflare/next-on-pages](https://github.com/cloudflare/next-on-pages), **Workers KV**
+- **Fonts**: Geist Sans / Mono (next/font)
 
 ## Docs
 
-- [Next.js](https://nextjs.org/docs) · [Cloudflare Workers](https://developers.cloudflare.com/workers/) · [Cloudflare KV](https://developers.cloudflare.com/kv/) · [next-on-pages](https://github.com/cloudflare/next-on-pages)
+- [Next.js](https://nextjs.org/docs) · [shadcn/ui](https://ui.shadcn.com) · [Cloudflare Workers](https://developers.cloudflare.com/workers/) · [Cloudflare KV](https://developers.cloudflare.com/kv/) · [next-on-pages](https://github.com/cloudflare/next-on-pages)
