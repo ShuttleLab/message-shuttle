@@ -1,5 +1,6 @@
 "use client";
 
+import { Heart } from "lucide-react";
 import { useI18n } from "@/components/i18n-provider";
 import { SupportDonateButton } from "@/components/support-donate";
 import { ShareButton } from "@/components/share-button";
@@ -159,9 +160,14 @@ export default function AboutContent() {
         </CardContent>
       </Card>
 
-      <div className="bg-gradient-to-r from-primary via-primary to-chart-5 text-primary-foreground rounded-xl p-8 mb-8 shadow-lg">
-        <h2 className="text-2xl font-semibold mb-4">{t.about.supportTitle}</h2>
-        <p className="mb-6 opacity-90">{t.about.supportDesc}</p>
+      <div className="bg-gradient-to-r from-primary via-primary to-chart-5 text-primary-foreground rounded-2xl p-10 mb-8 shadow-xl">
+        <div className="flex items-center gap-4 mb-6">
+          <div className="size-14 rounded-xl bg-white/20 flex items-center justify-center">
+            <Heart className="size-7" />
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold">{t.about.supportTitle}</h2>
+        </div>
+        <p className="mb-8 opacity-90 text-lg leading-relaxed">{t.about.supportDesc}</p>
         <div className="flex flex-wrap gap-4">
           <SupportDonateButton />
           <ShareButton />
