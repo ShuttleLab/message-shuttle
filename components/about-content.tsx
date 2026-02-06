@@ -173,10 +173,10 @@ export default function AboutContent() {
         <p className="mt-2">
           {t.about.contactEmail}：
           <a
-            href="mailto:a.tiling120@slmail.me"
+            href="mailto:shuttlelab.org@gmail.com"
             className="text-primary hover:underline underline-offset-4"
           >
-            a.tiling120@slmail.me
+            shuttlelab.org@gmail.com
           </a>
         </p>
       </div>
