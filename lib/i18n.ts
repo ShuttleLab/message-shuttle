@@ -3,7 +3,7 @@ export type Language = 'zh' | 'en';
 export const translations: Record<Language, Record<string, Record<string, string>>> = {
   zh: {
     common: {
-      appName: '消息穿梭机',
+      appName: 'ShuttleLab',
       sendReceive: '发送/接收',
       about: '关于',
       toggleLabel: '中/EN',
@@ -95,7 +95,7 @@ export const translations: Record<Language, Record<string, Record<string, string
   },
   en: {
     common: {
-      appName: 'Message Shuttle',
+      appName: 'ShuttleLab',
       sendReceive: 'Send / Receive',
       about: 'About',
       toggleLabel: 'EN/中',
