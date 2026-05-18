@@ -26,7 +26,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     setLangState(next);
     if (typeof window !== "undefined") {
       localStorage.setItem("lang", next);
-      document.documentElement.lang = next === "zh" ? "zh" : "en";
+      document.documentElement.lang = next === "zh" ? "zh-CN" : "en";
     }
   };
 

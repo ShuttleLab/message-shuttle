@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
@@ -17,9 +17,49 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fdf2f8" },
+    { media: "(prefers-color-scheme: dark)", color: "#2a0a1a" },
+  ],
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Message Shuttle",
+  applicationCategory: "WebApplication",
+  operatingSystem: "Web",
+  description: "Secure, private and easy message delivery service.",
+  url: "https://msg.shuttlelab.org",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+};
+
 export const metadata: Metadata = {
-  title: "消息穿梭机",
-  description: "安全、私密、便捷的消息传递服务",
+  metadataBase: new URL("https://msg.shuttlelab.org"),
+  title: "消息穿梭机 | Message Shuttle",
+  description: "安全、私密、便捷的消息传递服务 | Secure, private and easy message delivery",
+  alternates: {
+    canonical: "/",
+  },
+  // verification: {
+  //   google: "<paste-google-search-console-verification-code-here>",
+  // },
+  openGraph: {
+    title: "消息穿梭机 | Message Shuttle",
+    description: "安全、私密、便捷的消息传递服务 | Secure, private and easy message delivery",
+    siteName: "Message Shuttle",
+    type: "website",
+    locale: "zh_CN",
+    alternateLocale: ["en_US"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "消息穿梭机 | Message Shuttle",
+    description: "安全、私密、便捷的消息传递服务 | Secure, private and easy message delivery",
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +68,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh" suppressHydrationWarning>
+    <html lang="zh-CN" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
