@@ -24,6 +24,7 @@ const SIBLING_SITES: { name: string; host: string; featured?: boolean }[] = [
   { name: "URL Shuttle", host: "url.shuttlelab.org" },
   { name: "Regex Shuttle", host: "regex.shuttlelab.org" },
   { name: "Time Shuttle", host: "time.shuttlelab.org" },
+  { name: "SMS Forwarder", host: "smsforwarder.shuttlelab.org" },
 ];
 
 export default function Footer() {
