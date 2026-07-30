@@ -28,6 +28,11 @@ const SIBLING_SITES: { name: string; host: string; featured?: boolean }[] = [
   { name: "NetPulse", host: "netpulse.shuttlelab.org" },
 ];
 
+const TOOL_PAGES: { href: string; labelKey: string }[] = [
+  { href: "/tools/burn-after-reading", labelKey: "toolBurnAfterReading" },
+  { href: "/tools/send-secret-message", labelKey: "toolSendSecretMessage" },
+];
+
 export default function Footer() {
   const { t } = useI18n();
   const others = SIBLING_SITES.filter((s) => s.host !== CURRENT_HOST);
@@ -47,6 +52,20 @@ export default function Footer() {
             >
               {t.common.contact}
             </a>
+          </div>
+
+          <div className="flex flex-col items-center gap-1.5 pt-1">
+            <span className="text-xs uppercase tracking-wider text-muted-foreground/70">{t.common.tools}</span>
+            <nav className="flex items-center gap-x-2 gap-y-1 flex-wrap justify-center max-w-3xl">
+              {TOOL_PAGES.map((p, idx, arr) => (
+                <span key={p.href} className="flex items-center gap-x-2">
+                  <Link href={p.href} className="hover:text-foreground transition-colors">
+                    {t.common[p.labelKey]}
+                  </Link>
+                  {idx < arr.length - 1 && <span className="text-muted-foreground/30">·</span>}
+                </span>
+              ))}
+            </nav>
           </div>
 
           <div className="flex flex-col items-center gap-1.5 pt-1">

@@ -9,6 +9,9 @@ export const translations: Record<Language, Record<string, Record<string, string
       toggleLabel: '中/EN',
       contact: '联系我们',
       otherTools: 'ShuttleLab 旗下其他产品',
+      tools: '工具',
+      toolBurnAfterReading: '阅后即焚',
+      toolSendSecretMessage: '发送密信',
       allRightsReserved: '保留所有权利',
     },
     home: {
@@ -95,6 +98,9 @@ export const translations: Record<Language, Record<string, Record<string, string
       toggleLabel: 'EN/中',
       contact: 'Contact',
       otherTools: 'Other tools by ShuttleLab',
+      tools: 'Tools',
+      toolBurnAfterReading: 'Burn After Reading',
+      toolSendSecretMessage: 'Send Secret Message',
       allRightsReserved: 'All rights reserved.',
     },
     home: {
