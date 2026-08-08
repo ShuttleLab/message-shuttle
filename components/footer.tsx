@@ -26,6 +26,7 @@ const SIBLING_SITES: { name: string; host: string; featured?: boolean }[] = [
   { name: "Time", host: "time.shuttlelab.org" },
   { name: "SMS Forwarder", host: "smsforwarder.shuttlelab.org" },
   { name: "NetPulse", host: "netpulse.shuttlelab.org" },
+  { name: "Secretary", host: "secretary.shuttlelab.org" },
 ];
 
 const TOOL_PAGES: { href: string; labelKey: string }[] = [
